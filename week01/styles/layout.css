@@ -13,7 +13,7 @@ body {
     background-color: #fefdfd;
     font-family: acme, Arial, sans-serif;
     font-size: clamp(14px, 2vw, 18px); /* Never smaller than 14px; Scales based on 2vw; Never larger than 18px */
-    grid-template: 150px 1fr 200px / repeat(4, 1fr);
+    grid-template: 100px 1fr 120px / repeat(4, 1fr);
 }
 
 header {
@@ -70,7 +70,7 @@ main {
 
 aside {
     background: #F0EAD6;
-    background: color-mix(in srgb, #F0EAD6 30%, white);
+    background: color-mix(in srgb, #F0EAD6 60%, white);
     grid-column: 4 / 5;
     color: #333;
 }

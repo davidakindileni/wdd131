@@ -44,6 +44,7 @@ header nav {
 }
 
 .nav-menu a {
+    display: flex;
     display: block;
     color: #eee;
     padding: 0.75rem;

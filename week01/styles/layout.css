@@ -1,0 +1,106 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    width: 90vw;
+    height: 100vh;
+    margin: 0 auto;
+    color: #fff;
+    background-color: #fefdfd;
+    font-family: acme, Arial, sans-serif;
+    font-size: clamp(14px, 2vw, 18px); /* Never smaller than 14px; Scales based on 2vw; Never larger than 18px */
+    grid-template: 100px 1fr 120px / repeat(4, 1fr);
+}
+
+header {
+    position: relative;
+    background: rgb(110, 109, 109);
+    grid-column: 1 / 5;
+    padding-top: 1rem;
+}
+
+header nav {
+    width: 90vw;
+    margin: 0 auto 2rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.nav-menu li {
+    flex: 1 1 auto;
+    /* What is the difference between auto and 100% flex-basis? - turn on link borders to view */
+}
+
+.nav-menu a {
+    display: flex;
+    display: block;
+    color: #eee;
+    padding: 0.75rem;
+    text-decoration: none;
+    text-align: center;
+}
+
+.nav-menu a:hover {
+    font-weight: 700;
+    text-decoration: none;
+    color: #edc32e;
+    font-weight: bold;
+}
+
+.nav-menu, footer {
+    background-color: #333;
+}
+
+main {
+    background: color-mix(in srgb, #B2BEB5 50%, white);
+    grid-column: 1 / 4;
+    color: #333;
+}
+
+aside {
+    background: #F0EAD6;
+    background: color-mix(in srgb, #F0EAD6 60%, white);
+    grid-column: 4 / 5;
+    color: #333;
+}
+
+main, aside {
+    padding-top: 4rem;
+}
+
+header, main, aside {
+    padding-left: 1rem;
+}
+
+footer {
+    padding: 1rem;
+    text-align: center;
+    grid-column: 1 / 5;
+}
+
+/* :root {
+    --primary-color: #8DB38B;
+    --secondary-color: #BDBEA9;
+    --accent1-color: #d2ab99;
+    --accent2-color: #56876D;
+    --hdr-highlight-color: #072917;
+    --padding-small: 10px;
+    --standard-border: 1px solid;
+    --shadow-gray: 0 0 30px gray;
+    --padding-rem: 1rem;
+    --padding-medium: 20px;
+    --heading-font: Georgia, 'Times New Roman', Times, serif;
+    --body-font: Roboto, Arial, sans-serif;
+} */

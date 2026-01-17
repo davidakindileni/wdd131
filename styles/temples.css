@@ -1,0 +1,167 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --color-primary: #334155;
+    --color-secondary: #002e5d /* #64748B */;
+    --color-accent1: #EAB308;
+    --color-accent2: #22C55E;
+    --color-neutral: #FFFFFF;
+
+    /* Text colors (accessibility-compliant) */
+    --text-on-primary: #FFFFFF;
+    --text-on-secondary: #FFFFFF;
+    --text-on-accent1: #000000;
+    --text-on-accent2: #000000;
+    --text-on-neutral: #0F172A;
+
+    /* Backgrounds */
+    --bg-body: var(--color-neutral);
+    --bg-header: var(--color-primary);
+    --bg-footer: var(--color-secondary);
+    --bg-card: #F8FAFC;
+
+    /* Border and divider tones */
+    --border-color: #E2E8F0;
+    /* soft gray border */
+    --divider-color: #CBD5E1;
+
+    /* Shadows */
+    --shadow-light: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body {
+    margin: 1.5rem;
+    background-color: var(--bg-body);
+    color: var(--text-on-neutral);
+    font-family: Roboto, Arial, sans-serif;
+    font-size: clamp(16px, 18px, 32px);
+    /* Never smaller than 14px; Scales based on 2vw; Never larger than 18px */
+}
+
+/* Header and Navigation */
+
+header, header-container {
+    display: block;
+}
+
+/* Heading text */
+.page-title {
+    background-color: var(--bg-header);
+    font-size: 1.5rem;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Navigation bar */
+/* Mobile View ***************/
+#menu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: #eee;
+    color: #000;
+}
+
+#menu::before {
+    content: "≡";
+}
+
+nav {
+    background-color: var(--color-secondary);
+}
+
+.navigation {
+    list-style: none;
+    margin: 0 auto;
+    max-width: 760px;
+}
+
+.navigation li {
+    display: none;
+}
+
+.navigation a {
+    display: block;
+    padding: 0.75rem;
+    text-decoration: none;
+    margin-top: 0.2rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-on-secondary);
+    font-weight: 600;
+    transition: 0.5s;
+    font-size: clamp(1rem, 2vmin, 1.5rem);
+    text-align: center;}
+
+.navigation a:hover,
+.navigation a:active {
+    color: #edc32e /* var(--text-on-secondary) */;
+    font-weight: 800;
+    background-color: #3D3D3D /* var(--color-secondary) */;
+}
+
+.show li {
+    display: block;
+}
+
+#menu.show::before {
+    content: "X";
+}
+
+/* Temple Gallery Section */
+
+h1 {
+    background-color: var(--bg-header);
+    color: #eee;
+    text-align: center;
+    padding: 0.5rem 0;
+    margin-bottom: 1rem;
+}
+
+.temple-imgs {
+    text-align: center;
+}
+
+figure img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    margin: 0 auto;
+    transition: width 0.5s ease, height 0.5s ease;
+}
+
+figcaption {
+    color: var(--hdr-highlight-color);
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: clamp(1rem, 2vmin, 1.5rem);}
+
+
+
+/* footer */
+footer {
+    display: block;
+    background-color: var(--color-secondary);
+    padding: 1rem;
+    color: var(--text-on-secondary);
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.last-mod {
+    color: #b2ff00;
+}
+

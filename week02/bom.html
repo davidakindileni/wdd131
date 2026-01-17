@@ -1,0 +1,41 @@
+<!--
+BYU-Pathway WDD131 - Dynamic Web Fundamentals | 26T1 | Paulo Dallastra
+Author: Akinsola David Akindileni
+W02 Learning Activities: Book of Mormon Favorite Chapters
+-->
+
+<!doctype html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="WDD131 - Akinsola David Akindileni - Book of Mormon Favorite Chapters">
+  <meta name="author" content="A. David Akindileni">
+  <title>A. David Akindileni - WDD131 - Book of Mormon Favorite Chapters</title>
+
+  <!-- Remove page caching -->
+  <meta http-equiv="cache-control" content="no-cache">
+  <meta http-equiv="expires" content="0">
+  <meta http-equiv="pragma" content="no-cache">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&20display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/bom.css">
+</head>
+
+<body>
+  <h1>📖 Book of Mormon - Top 10</h1>
+  <main>
+    <label for="favchap">Enter Book and Chapter: </label>
+    <input type="text" id="favchap" placeholder="Alma 5" value="Alma 5">
+    <button type="submit">Add Chapter</button>
+    <ul id="list"></ul>
+    <!-- <button aria-label="Close" id="close-button">❌</button> -->
+  </main>
+  <script src="scripts/bom.js" defer></script>
+
+</body>
+
+</html>

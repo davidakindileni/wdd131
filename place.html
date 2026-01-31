@@ -1,0 +1,94 @@
+<!--
+BYU-Pathway WDD131 - Dynamic Web Fundamentals | 25T6 | Matthew Kearl
+Author: Akinsola David Akindileni
+W03 Assignment: Country Page
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 – Dynamic Web Fundamentals – Akinsola David Akindileni</title>
+    <meta name="description" content="WDD 131 | Country Page | Akinsola David Akindileni">
+    <meta name="author" content="Akinsola David Akindileni">
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/place.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="scripts/getdates.js" defer></script>
+    <script src="scripts/place.js" defer></script>
+</head>
+
+<body>
+    <div class="page-container">
+        <header>
+            <div class="place-title">
+                <h1>Nigeria</h1>
+            </div>
+        </header>
+        <main>
+            <hr class="b4-hero">
+            <div class="hero-container">
+                <picture class="hero-img">
+                    <source srcset="images/nigerian-culture-and-tradition-large.webp" media="(min-width: 1200px)">
+                    <source srcset="images/nigerian-culture-and-tradition-medium.webp" media="(min-width: 768px)">
+                    <img src="images/nigerian-culture-and-tradition-small.webp" width="300" height="auto" alt="Nigerian Culture" loading="lazy">
+                </picture>
+                <hr class="aft-hero">
+            </div>
+            <hr />
+            <div class="data-box">
+                <h2>Data</h2>
+                <dl class="dl-like">
+                    <dt>Area:</dt>
+                    <dd>923,768 km²</dd>
+                    <dt>Population:</dt>
+                    <dd>237.5 million</dd>
+                    <dt>Capital:</dt>
+                    <dd>Abuja, Federal Capital Territory</dd>
+                    <dt>Languages:</dt>
+                    <dd>Yoruba, Igbo, Hausa, and others</dd>
+                    <dt>Currency:</dt>
+                    <dd>Naira</dd>
+                    <dt>Time Zone:</dt>
+                    <dd>UTC+1</dd>
+                    <dt>Calling Code:</dt>
+                    <dd>+234</dd>
+                    <dt>Internet TLD:</dt>
+                    <dd>.ng</dd>
+                </dl>
+            </div>
+            <hr class="data-weather-sep">
+            <div class="weather-box">
+                <div class="weather-box-hdr">
+                    <h2 class="weather-heading">Weather</h2>
+                    <!-- <picture class="weather-icon">
+                        <source srcset="images/sunny-weather.png" media="(min-width: 768px)">
+                        <img class="img-svg" src="images/sunny-weather.svg" width="48px" height="auto" alt="Weather icon" loading="lazy">
+                    </picture> -->
+                </div>
+                <dl class="dl-like">
+                    <dt>Temparature:</dt>
+                    <dd>27 °C</dd>
+                    <dt>Conditions:</dt>
+                    <dd>Fair skies with clouds</dd>
+                    <dt>Wind:</dt>
+                    <dd>13 km/h</dd>
+                    <dt>Wind Chill:</dt>
+                    <dd>Not applicable (tropical)</dd>
+                </dl>
+            </div>
+        </main>
+        <footer>
+            <h3 class="footer-info">&copy; <span id="currentyear"></span>&nbsp;&nbsp;|&nbsp;&nbsp;Akinsola David
+                Akindileni&nbsp;&nbsp;|&nbsp;&nbsp;Nigeria</h3>
+            <h3 class="last-mod">Last Updated: <span id="lastmodified"></span></h3>
+        </footer>
+    </div>
+</body>
+
+</html>

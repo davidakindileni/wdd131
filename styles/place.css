@@ -71,11 +71,11 @@ h2 {
     align-items: center;
 }
 
-/* .weather-icon img {
+.weather-icon img {
     margin-bottom: 20px;
     max-width: 48px;
     height: auto;
-} */
+}
 
 /* Data and Weather Styles */
 .dl-like {
@@ -192,18 +192,18 @@ footer {
         text-align: left;
     }
     
-    .weather-heading::after {
+    /* .weather-heading::after {
         content: "\2600";
         font-size: 1.5rem;
         color: orange;
         vertical-align: middle;
         margin-left: 12px;
     }
-
-    /* .weather-icon img {
+ */
+    .weather-icon img {
         margin: 0;
         max-width: 32px;
-    } */
+    }
 
     footer {
         margin-top: 0;

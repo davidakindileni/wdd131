@@ -1,0 +1,213 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+ 
+:root {
+    --primary-color: #008751;
+    --secondary-color: #1B7339;
+    --accent-color1: #A7F0C1;
+    --accent-color2: #ffa84a;
+    --background-color: #fefdfd;
+    --primary-font-color: #ffffff;
+    --font-family: 'Roboto', Arial, sans-serif;
+}
+body {
+    font-family: Roboto, Arial, sans-serif;
+    font-size: clamp(16px, 18px, 32px);
+    /* Never smaller than 14px; Scales based on 2vw; Never larger than 18px */   
+    margin: 0 auto;
+    background-color: var(--background-color);
+    width: 90%;
+}
+
+header {
+    margin-top: 1rem;
+}
+
+.place-title {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 2rem;
+    background-color: var(--primary-color);
+    color: var(--primary-font-color);
+}
+
+.b4-hero {
+    background-color: var(--accent-color1);
+    height: 0.8rem;
+}
+
+.aft-hero {
+    background-color: var(--accent-color2);
+    height: 0.8rem;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    transition: all 0.25s ease;
+}
+
+h2 {
+    text-align:center;
+    margin: 1.2rem 0;
+    font-size: 1.5rem;
+}
+
+.data-weather-sep {
+    border: none;
+    height: 1.5px;
+    background-color: #EBEBEB;
+    margin: 1.8rem auto 0.5rem;
+}
+
+.weather-box-hdr {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* .weather-icon img {
+    margin-bottom: 20px;
+    max-width: 48px;
+    height: auto;
+} */
+
+/* Data and Weather Styles */
+.dl-like {
+    display: grid;
+    grid-template-columns: 1fr 20px 1fr;
+    gap: 0.6rem 0;
+    font-size: 0.9rem;
+}
+
+.dl-like dt {
+    text-align: right;
+    grid-column: 1 / 2;
+}
+
+.dl-like dd {
+    text-align: left;
+    grid-column: 3 / 4;
+}
+
+footer {
+    margin-top: 20px;
+    display: block;
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--primary-font-color);
+    font-size: 0.9rem;
+    font-weight: bold;
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Larger Viewports */  
+@media (min-width: 768px) {
+
+    body {
+        width: 70vw;
+        margin: 0 auto;
+    }
+
+    img {
+        height: auto;
+    }
+
+    .page-container {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    .data-box, .weather-box {
+        position: absolute
+    }
+
+    .data-weather-sep {
+        display: none;
+    }
+
+    .dl-like {
+        gap: 0.4rem 0;
+        font-size: 0.8rem;
+    }
+
+    .dl-like dt {
+        font-weight: bold;
+    }
+
+    /* ───── Data Box (left) ───── */
+    .data-box {
+        /* position: absolute; */
+        top: 16%;
+        left: 1.5%;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 15px 20px;
+        width: 25%;
+    }
+
+    .data-box h2 {
+        background-color: var(--secondary-color);
+        padding: 1rem;
+        margin-top: 0;
+        margin-left: -2rem;
+        font-size: 1.4rem;
+        color: var(--primary-font-color);
+        text-align: left;
+    }
+
+    /* ───── Weather Box (right) ───── */
+    .weather-box {
+        /* position: absolute; */
+        bottom: 15%;
+        right:2%;
+        background: rgba(255, 255, 255, 0.85);
+        padding: 15px 18px;
+        width: 24%;
+    }
+
+    .weather-box-hdr {
+        background-color: var(--secondary-color);
+        display: flex;
+        flex-direction: row;
+        /* align-items: center; */
+        margin-top: 0;
+        margin-left: -2rem;
+        margin-bottom: 1rem;
+    }
+
+    .weather-box h2 {
+        /* background-color: var(--secondary-color); */
+        padding-left: 1rem;
+        margin-right: 10px;
+        font-size: 1.4rem;
+        color: var(--primary-font-color);
+        text-align: left;
+    }
+    
+    .weather-heading::after {
+        content: "\2600";
+        font-size: 1.5rem;
+        color: orange;
+        vertical-align: middle;
+        margin-left: 12px;
+    }
+
+    /* .weather-icon img {
+        margin: 0;
+        max-width: 32px;
+    } */
+
+    footer {
+        margin-top: 0;
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+}
